@@ -1,0 +1,63 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .output-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .output-box {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #0000;
+    min-height: 200px;
+    white-space: pre-wrap;
+  }
+  
+  .input-container {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .input-field {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    resize: none;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #007bff;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .chat-response {
+    white-space: pre-wrap; /* Allow line breaks but preserve spaces */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-width: 700px; /* Set a maximum width for text content */
+    padding: 10px; /* Add padding for better readability */
+    margin: 0; /* Remove default margins */
+    font-family: monospace; /* Use a monospaced font for consistent formatting */
+  }
+  
+  .output-container {
+    height: calc(100vh - 100px); /* Set height to fill remaining viewport space */
+    /* Adjust the height value as needed based on your overall layout */
+  }

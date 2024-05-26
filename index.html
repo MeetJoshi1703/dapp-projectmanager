@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+
+</head>
+<body>
+    <div class="chat-input-container">
+        <textarea id="chat-input" placeholder="Type a message..."></textarea>
+        <div class="attachment-controls">
+            <label for="attach-image">
+                <i class="fas fa-image"></i>
+            </label>
+            <label for="attach-video">
+                <i class="fas fa-file-video"></i>
+            </label>
+        </div>
+        <button id="send-button" >Send</button>
+    </div>
+    <input type="file" id="attach-image" accept="image/*" hidden>
+    <input type="file" id="attach-video" accept="video/*" hidden>
+<script>
+    const chatInput = document.getElementById('chat-input');
+const sendButton = document.getElementById('send-button');
+const attachImageInput = document.getElementById('attach-image');
+const attachVideoInput = document.getElementById('attach-video');
+
+// Enable send button only when there's text or a selected file
+chatInput.addEventListener('input', () => {
+    sendButton.disabled = !chatInput.value && !attachImageInput.files.length && !attachVideoInput.files.length;
+});
+
+attachImageInput.addEventListener('change', () => {
+    // Handle image selection (validation, preview if desired)
+    sendButton.disabled = false; // Enable send button on image selection
+});
+
+attachVideoInput.addEventListener('change', () => {
+    // Handle video selection (validation, preview if desired)
+    sendButton.disabled = false; // Enable send button on video selection
+});
+
+sendButton.addEventListener('click', () => {
+    // Handle form submission with text and potential media files
+    const formData = new FormData();
+    formData.append('message', chatInput.value);
+    if (attachImageInput.files.length) {
+        formData.append('image', attachImageInput.files[0]);
+    }
+    if (attachVideoInput.files.length) {
+        formData.append('video', attachVideoInput.files[0]);
+    }
+
+    // Send the formData to your backend using fetch or Axios (consider security)
+    fetch('/send-message', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        // Handle successful submission (clear input, display success message)
+        chatInput.value = '';
+        sendButton.disabled = true;
+        attachImageInput.value = ''; // Clear file selection
+        attachVideoInput.value = '';
+    })
+    .catch(error => {
+        // Handle submission errors (display error message)
+    });
+});
+
+</script>    
+</body>
+</html>
