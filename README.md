@@ -80,12 +80,12 @@ Enhance your understanding of our platform through these UI screenshots:
 ### Installation
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-repo/collaboration-tool.git
+   git clone https://github.com/MeetJoshi1703/dapp-projectmanager.git
    ```
    
 2. **Navigate to the project directory**:
    ```sh
-   cd collaboration-tool
+   cd dapp-projectmanager
     ```
 
 3. **Install dependencies**:
