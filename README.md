@@ -1,5 +1,5 @@
-# Collaboration Tool for Employee Developers
-![Screenshot (255)](https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/c3528d0b-7eef-4447-b41d-48c856f194af)
+# Web3 based project management tool
+![Home Page](https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/5b94f08e-d3aa-413b-a348-0e01d7aa7640)
 
 ## Overview
 Welcome to the Collaboration Tool for Employee Developers, a cutting-edge Web3-based platform designed to revolutionize team collaboration and productivity. This tool integrates advanced blockchain technology and innovative features to create a seamless and secure environment for developer teams.
@@ -10,17 +10,17 @@ Welcome to the Collaboration Tool for Employee Developers, a cutting-edge Web3-b
 - **Description**: Automatically incentivize your team with cryptocurrency rewards upon task completion.
 - **Implementation**: Leveraging robust smart contracts, this feature ensures secure and transparent transactions, fostering motivation and productivity.
 
-### 2. Secure File Management via IPFS
-- **Description**: Empower your team with the ability to securely upload and download files using IPFS.
-- **Upload Interface**: Simplified file upload process that generates a unique hash for secure storage.
-- **Download Interface**: Access files securely with unique hashes, ensuring only authorized personnel can retrieve them.
-
-### 3. Intelligent Chatbot
+### 2. Intelligent Chatbot via ChainGPT
 - **Description**: Enhance your development process with a smart chatbot powered by ChainGPT API.
 - **Features**:
   - **Code Generation Assistance**: Get help with generating efficient and effective code.
   - **Smart Contract Validation**: Ensure your smart contracts are robust and error-free.
   - **Real-Time Support**: Receive instant guidance and support.
+
+### 3. Secure File Management
+- **Description**: Empower your team with the ability to securely upload and download files using IPFS.
+- **Upload Interface**: Simplified file upload process that generates a unique hash for secure storage.
+- **Download Interface**: Access files securely with unique hashes, ensuring only authorized personnel can retrieve them.
 
 ### 4. Integrated Chatting Application
 - **Description**: Streamline team communication with our integrated real-time chat application.
@@ -40,20 +40,34 @@ Our smart contracts are live and deployed on the Sepolia network using Alchemy, 
 Enhance your understanding of our platform through these UI screenshots:
 
 ### Auto-Rewarding System
-<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/daa75b7f-338e-41b5-b0de-19080cc1a99c alt="auto-reward-image" width=500>
+<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/375f4b8c-f6f5-41c8-b96f-02ecc1d0cb33 alt="auto-reward-image" width=500>
+
+<br>
+<br>
+
+### Intelligent Chatbot via ChainGPT
+<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/9e6b58e5-a04c-4fae-9aa9-696911c5085e alt="chatbot-image" width=500>
+
+<br>
+<br>
 
 ### File Management via IPFS
+<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/8cafc984-d759-4925-96ab-8c2520e755d3 alt="ipfs-image" width=500> 
 
-<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/851fc424-9233-4f62-aef7-239c50ae30e0 alt="ipfs-image" width=500> 
-
-### Intelligent Chatbot
-<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/dbf92b36-edd6-411d-9f9c-e0b6627c1f42 alt="chatbot-image" width=500>
+<br>
+<br>
 
 ### Integrated Chatting Application
-<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/20ed5fe5-e5d3-4bd8-998a-183d67635870 alt="chatting-image" width=500>
+<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/12b8d662-7870-41f2-ab59-1d63e584b5e8 alt="chatting-image" width=500>
+
+<br>
+<br>
 
 ### Immutable Log System
-<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/7a2b1bc7-1b5c-4f0e-9fd8-6d191a1eccaa alt="log-image" width=500>
+<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/0425b908-fe22-407f-a377-8e06eb003382 alt="log-image" width=500>
+
+<br>
+<br>
 
 ## Getting Started
 
@@ -63,18 +77,37 @@ Enhance your understanding of our platform through these UI screenshots:
 - **MetaMask or any other Web3 wallet**
 - **Alchemy API Key**
 
+### Installation
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/your-repo/collaboration-tool.git
+   ```
+   
+2. **Navigate to the project directory**:
+   ```sh
+   cd collaboration-tool
+    ```
+
+3. **Install dependencies**:
+   ```sh
+   npm install
+    ```
+
+4. **Running the Application**
+  Start the development server:
+   ```sh
+   npm start
+    ```
+Open your browser and navigate to http://localhost:3000.
+
+
+
 ## Usage
 - **Auto-Rewarding System**: Receive cryptocurrency rewards automatically upon task completion.
 - **File Management**: Securely upload and download files using IPFS.
 - **Intelligent Chatbot**: Utilize the chatbot for code generation and smart contract validation.
 - **Chatting Application**: Collaborate efficiently through integrated real-time chat.
 - **Immutable Log System**: Log important entries securely on the blockchain.
-
-## Contributing
-We welcome contributions! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute to this project.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 - [Alchemy](https://www.alchemy.com/)
