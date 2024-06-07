@@ -31,10 +31,6 @@ function App() {
           <Route path='/'element={<LandingPage/>} />
           <Route path='/logs'element={authUser?<Log/>:<Login/>} />
 
-
-          
-          
-
         </Routes>
         <Toaster/>
         </div>

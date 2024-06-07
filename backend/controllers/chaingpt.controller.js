@@ -1,6 +1,6 @@
 import { GeneralChat, Errors } from '@chaingpt/generalchat';
 
-const API_KEY = 'bc47184d-6bdb-49a9-ab25-21fa9015227f'; // Replace with your actual API key
+const API_KEY = 'bc47184d-6bdb-49a9-ab25-21fa9015227f'; 
 
 const generalchat = new GeneralChat({
   apiKey: API_KEY,
@@ -33,10 +33,10 @@ async function sendPromptToApi(userPrompt) {
   } catch (error) {
     if (error instanceof Errors.GeneralChatError) {
       console.log(error.message);
-      throw error; // Re-throw for handling in the API endpoint
+      throw error; 
     } else {
       console.error('Unexpected error:', error);
-      throw error; // Re-throw for handling in the API endpoint
+      throw error; 
     }
   }
 }
@@ -53,7 +53,7 @@ const promptBot = async (req, res) => {
     res.json({ processedText });
   } catch (error) {
     console.error('An error occurred:', error);
-    res.status(500).json({ error: 'Internal server error' }); // Generic error for security
+    res.status(500).json({ error: 'Internal server error' }); 
   }
 };
 

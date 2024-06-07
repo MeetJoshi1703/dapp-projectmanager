@@ -7,8 +7,8 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract TaskRewardToken is ERC20{
     address public owner;
-    uint256 public constant TOKENS_PER_INTERACTION = 100 * 10 ** 18; // Assuming 18 decimal places
-    uint256 public constant MAX_TRANSFER_AMOUNT = 5 * 10 ** 18; // Max 5 tokens (assuming 18 decimal places)
+    uint256 public constant TOKENS_PER_INTERACTION = 100 * 10 ** 18; 
+    uint256 public constant MAX_TRANSFER_AMOUNT = 5 * 10 ** 18; 
 
     constructor() ERC20("TaskRewardToken", "TRT") {
         

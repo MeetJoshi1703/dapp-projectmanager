@@ -21,12 +21,9 @@ const Ipfs = () => {
     const handleUpload = async (event) => {
         event.preventDefault();
         const formData = new FormData();
-        const selectedFiles = event.target.files;
+        const selectedFiles = event.target.files.files;
         
-        if (!selectedFiles.length) {
-            setUploadStatus('Please select files to upload');
-            return;
-          }
+        
 
         for (let i = 0; i < selectedFiles.length; i++) {
             formData.append('recfiles', selectedFiles[i]);

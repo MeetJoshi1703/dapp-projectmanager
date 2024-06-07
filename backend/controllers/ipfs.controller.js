@@ -47,29 +47,36 @@ const getAllFiles = (req,res)=>{
 }
 
 const downloadFile = async (req, res) => {
-    try {
+  try {
       const filename = req.params.filename;
       const cid = hashMap.get(filename);
-  
+
       if (!cid) {
-        return res.status(404).json({ error: 'File not found' }); // Use JSON for structured response
+          return res.status(404).json({ error: 'File not found' });
       }
-  
+
       const fs = await createNode();
       const decoder = new TextDecoder();
-      let fileData = '';
-  
+      const chunks = [];
+
       for await (const chunk of fs.cat(cid)) {
-        fileData += decoder.decode(chunk, { stream: true });
+          chunks.push(chunk);
       }
-  
-      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`); // Use template literals for cleaner string construction
+
+      const fileData = Buffer.concat(chunks);
+      
+      
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      
+      res.setHeader('Content-Type', 'application/octet-stream');
       res.send(fileData);
-    } catch (error) {
+  } catch (error) {
       console.error(error);
-      res.status(500).json({ error: 'An error occurred while fetching the file' }); // Use JSON for structured response
-    }
-  };
+      res.status(500).json({ error: 'An error occurred while fetching the file' });
+  }
+};
+
+
   
 
 export{
