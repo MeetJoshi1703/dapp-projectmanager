@@ -87,20 +87,39 @@ Enhance your understanding of our platform through these UI screenshots:
    ```sh
    cd dapp-projectmanager
     ```
+   <br>
+   
+    - #### Backend
+      1. **Navigate to the backend directory**:
+         ```sh
+         cd backend
+         ```
+      2. **Install backend dependencies**:
+         ```sh
+         npm install
+         ```
+      3. **Start the backend server**:
+         ```sh
+         npm start
+         ```
+       <br>
 
-3. **Install dependencies**:
-   ```sh
-   npm install
-    ```
+    - #### Frontend
+      1. **Navigate to the backend directory**:
+         ```sh
+         cd ../frontend
+         ```
+      2. **Install backend dependencies**:
+         ```sh
+          npm install
+         ```
+      3. **Start the backend server**:
+         ```sh
+         npm start
+         ```
+After starting both the backend and frontend servers, open your browser and navigate to <a href=http://localhost:3000 target="_blank"> http://localhost:3000</a>.
 
-4. **Running the Application**
-  Start the development server:
-   ```sh
-   npm start
-    ```
-Open your browser and navigate to http://localhost:3000.
-
-
+<br>
 
 ## Usage
 - **Auto-Rewarding System**: Receive cryptocurrency rewards automatically upon task completion.
