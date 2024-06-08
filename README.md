@@ -36,6 +36,9 @@ Welcome to the Collaboration Tool for Employee Developers, a cutting-edge Web3-b
 ## Smart Contracts
 Our smart contracts are live and deployed on the Sepolia network using Alchemy, providing a reliable and scalable foundation for all blockchain functionalities.
 
+
+<img src=https://github.com/MeetJoshi1703/dapp-projectmanager/assets/100040922/f7ca3aa9-f8ae-48ed-8e4e-af12c77385b3 alt='smart_contract_log' width=500>
+
 ## Visual Overview
 Enhance your understanding of our platform through these UI screenshots:
 
